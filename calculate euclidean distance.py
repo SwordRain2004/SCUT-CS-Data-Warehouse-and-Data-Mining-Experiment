@@ -73,6 +73,7 @@ def database_find():
         if Euclidean_Distance[-1][-1] < min_Euclidean_Distance:
             min_index = i
             min_Euclidean_Distance = Euclidean_Distance[-1][-1]
-    print(f"与你的姓名的向量的欧几里得距离最接近的数据库的向量是第{min_index}个（从0开始计数）")  # 175
+    print(f"与你的姓名的向量的欧几里得距离最接近的数据库的向量是第{min_index}个（从0开始计数）")
     for i in sorted(Euclidean_Distance, key=lambda x: x[1]):
         print(i)
+algorithm_find()
