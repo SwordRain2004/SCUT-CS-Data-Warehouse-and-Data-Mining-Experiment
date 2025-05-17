@@ -56,7 +56,6 @@ def uci():
         trans_name = []
         for i in result:
             trans_name.append(i["dst"])
-        print(len(trans_name), len(temp))
         for i in range(0, len(temp)):
             Dataset.append([temp[i], trans_name[i]])
     df = pd.DataFrame(Dataset, columns=["Dataset Name", "数据库名字"])

@@ -58,8 +58,9 @@ def database_find():
     name_embeddings = data["data"][0]["embedding"]
     # 读取uci数据库中文名的向量
     vectors = []
-    for i in range(0, 678, 10):
-        with open(f"output{i}-{min(i + 10, 677)}.txt", "r", encoding="utf-8") as f:
+    database_amount = 678  # 由于uci数据库集持续更新，因此数据库数量会变化，请根据实际情况调整database_amount的值
+    for i in range(0, database_amount, 10):
+        with open(f"output{i}-{min(i + 10, database_amount - 1)}.txt", "r", encoding="utf-8") as f:
             content = f.read()
         content = json.loads(content)
         data = json.loads(content)
@@ -76,4 +77,4 @@ def database_find():
     print(f"与你的姓名的向量的欧几里得距离最接近的数据库的向量是第{min_index}个（从0开始计数）")
     for i in sorted(Euclidean_Distance, key=lambda x: x[1]):
         print(i)
-algorithm_find()
+database_find()
