@@ -1,6 +1,4 @@
-"""
-    本代码通过阿里云百炼的模型text-embedding-v3计算得到自己的姓名、算法的中文、数据库的中文名的向量
-"""
+"""本代码通过阿里云百炼的模型text-embedding-v3计算得到自己的姓名、算法的中文、数据库的中文名的向量"""
 
 from openai import OpenAI
 import pandas as pd
@@ -28,12 +26,12 @@ def get_name_vector():
 # 获取各个算法的中文名的向量
 def get_algorithm_vector():
     client = OpenAI(
-        api_key="sk-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",  # 输入你自己的API Key
+        api_key="sk-77c43823173d49edb00a10657e31cef7",  # 输入你自己的API Key
         # 获取API Key教程https://help.aliyun.com/zh/model-studio/get-api-key
         base_url="https://dashscope.aliyuncs.com/compatible-mode/v1"  # 百炼服务的base_url
     )
-    algorithm_name = ["亲和力传播", '桦木', '基于密度的聚类算法', '层次聚类', 'K均值聚类', '均值位移', '光学',
-                      '谱聚类算法']
+    algorithm_name = ["亲和力传播", '桦木', '基于密度的聚类算法', '层次聚类', 'K均值',
+                      '平均值滑动算法', '确定聚类结构的排序点', '谱聚类']
     """
     分类任务算法：
     (1). 集成学习中的Adaboost
@@ -49,10 +47,10 @@ def get_algorithm_vector():
     (2). BIRCH桦木
     (3). DBSCAN基于密度的聚类算法
     (4). Hierarchical clustering层次聚类
-    (5). K-means K均值聚类
-    (6). Mean Shift均值位移
-    (7). OPTICS光学
-    (8). Spectral clustering谱聚类算法
+    (5). K-means K均值
+    (6). Mean Shift平均值滑动算法
+    (7). OPTICS确定聚类结构的排序点
+    (8). Spectral clustering谱聚类
     """
     completion = client.embeddings.create(
         model="text-embedding-v3",

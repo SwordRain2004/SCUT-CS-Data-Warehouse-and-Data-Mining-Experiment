@@ -1,6 +1,4 @@
-"""
-    本代码通过百度翻译api和爬虫技术获取uci数据库的英文名和中文翻译并保存在uci_datasets.xlsx中
-"""
+"""本代码通过百度翻译api和爬虫技术获取uci数据库的英文名和中文翻译并保存在uci_datasets.xlsx中"""
 
 
 import requests
