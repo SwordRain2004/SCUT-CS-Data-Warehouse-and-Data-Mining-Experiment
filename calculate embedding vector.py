@@ -26,7 +26,7 @@ def get_name_vector():
 # 获取各个算法的中文名的向量
 def get_algorithm_vector():
     client = OpenAI(
-        api_key="sk-77c43823173d49edb00a10657e31cef7",  # 输入你自己的API Key
+        api_key="sk-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",  # 输入你自己的API Key
         # 获取API Key教程https://help.aliyun.com/zh/model-studio/get-api-key
         base_url="https://dashscope.aliyuncs.com/compatible-mode/v1"  # 百炼服务的base_url
     )
