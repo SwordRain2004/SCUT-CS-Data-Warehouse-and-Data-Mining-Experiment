@@ -1,6 +1,8 @@
 # SCUT-CS-Data-Warehouse-and-Data-Mining-Experiment
 华南理工大学计科全英创新班2025年春数据仓库与数据挖掘实验  --更新中
 
+希望大家能多多star~
+
 实验前置——任务算法与数据集的确定：使用中文 Word Embedding 选取与自己姓名最接近的(使用2-范数)三个算法以及数据集
 
 （1）运行get uci database names.py文件，获取uci数据库的中英文名称，在代码中使用了爬虫技术以及百度翻译的api
