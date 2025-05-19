@@ -1,5 +1,5 @@
 # SCUT-CS-Data-Warehouse-and-Data-Mining-Experiment
-华南理工大学计科全英创新班2025年春数据仓库与数据挖掘实验  --更新中
+华南理工大学计科全英创新班2025年春数据仓库与数据挖掘实验
 
 希望大家能多多star~
 
@@ -13,7 +13,26 @@
 
 聚类实验：
 
-作者的任务是完成聚类部分的实验，目前还没有完成
+##1. 数据预处理
+数据集中包含14个特征，包括age、education-num、occupation、hours-per-week等信息，以及一个分类标准income。对数据进行如下预处理：
+
+·删除education列，因为education列为字符串，而且与education-num，一个纯数字，高度关联，因此我认为education-num已经能够表达education所表达的信息，可以将education列删除
+
+·缺失值处理：将?替换为NaN并删除
+
+·获取分类标签：将income为”>50K”的数据标记为1，”<=50K”的数据标记为0，并在原表格中删除income这一列
+  
+·对非数值变量进行独热编码
+
+·对数值型变量进行标准化
+
+##2. 算法实现以及运行
+
+①对于传统聚类算法BIRCH，K-means，Agglomerative Clustering，直接调用sklearn库里的函数即可，并调用adjusted_rand_score, normalized_mutual_info_score函数分别计算ARI和NMI值
+
+②对于深度学习算法，我设计了一个简易的AutoEncoder+K-means模型，使用自编码器对初始数据进行编码以进行特征提取，再交给K-means算法进行聚类
+
+③最后通过PCA对数据进行降维，并将聚类结果可视化
 
 回归实验：
 
