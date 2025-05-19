@@ -13,6 +13,10 @@
 
 ## 聚类实验：
 
+我需要使用的数据集为Adult，所需要使用的算法是BIRCH, K-means以及Hierarchical clustering
+
+下载好以来的module以及Adult数据集，运行clustering analyse.py即可复现实验
+
 ### 1. 数据预处理
 数据集中包含14个特征，包括age、education-num、occupation、hours-per-week等信息，以及一个分类标准income。对数据进行如下预处理：
 
