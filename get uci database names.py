@@ -37,7 +37,8 @@ def uci():
         "User-Agent": ""
     }  # 更换为自己的User-Agent，如果不知道自己的User-Agent是什么，请自行上网搜索获取方法
     Dataset = []
-    for start_num in range(0, 678, 25):
+    for start_num in range(0, 678, 25):  
+        # 这里的678需要根据http://archive.ics.uci.edu/datasets里的数据集数量来更换，如果数据集数量更新为700，那么就需要把678改为700
         response = requests.get(
             f"http://archive.ics.uci.edu/datasets/?skip={start_num}&take=25&sort=desc&orderBy=NumHits&search=",
             headers=headers)
